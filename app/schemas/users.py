@@ -4,16 +4,13 @@ from typing import Optional
 from pydantic import BaseModel, EmailStr, Field, field_validator
 
 
-
 class UserSchema(BaseModel):
     """Пользователь."""
 
     username: str = Field(..., min_length=3, max_length=20, description="Ник")
-    email: EmailStr = Field(
-        ...,description="Email"
-    )
+    email: EmailStr = Field(..., description="Email")
 
-    @field_validator('email')
+    @field_validator("email")
     @classmethod
     def validator_len_email(cls, value: str) -> str:
         """Проверка длины email."""
