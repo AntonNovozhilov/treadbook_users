@@ -1,7 +1,8 @@
-from sqlalchemy import Column, String, UniqueConstraint, Boolean, Date
-from app.models.base import BaseModel
-
 from datetime import datetime
+
+from sqlalchemy import Boolean, Column, Date, String, UniqueConstraint
+
+from app.models.base import BaseModel
 
 
 class User(BaseModel):
@@ -14,8 +15,7 @@ class User(BaseModel):
     is_active = Column(Boolean, default=True, nullable=False)
     join_date = Column(Date, nullable=False, default=datetime.now)
 
-
     __table_args__ = (
-        UniqueConstraint('username', name='uq_username'),
-        UniqueConstraint('email', name='uq_email'),
+        UniqueConstraint("username", name="uq_username"),
+        UniqueConstraint("email", name="uq_email"),
     )
