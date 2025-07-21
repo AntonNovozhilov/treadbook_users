@@ -8,9 +8,10 @@ from sqlalchemy.ext.asyncio import (
     async_sessionmaker,
     create_async_engine,
 )
+
 from app.core.config import settings
 
-load_dotenv = ".env"
+load_dotenv(".env")
 
 DATEBASE_URL = (
     f"postgresql+asyncpq:///"

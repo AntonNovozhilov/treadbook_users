@@ -7,7 +7,9 @@ from pydantic import BaseModel, EmailStr, Field, field_validator
 class UserSchema(BaseModel):
     """Пользователь."""
 
-    username: str = Field(..., min_length=3, max_length=20, description="Ник")
+    username: str = Field(
+        ..., min_length=3, max_length=20, description="Ник"
+    )
     email: EmailStr = Field(..., description="Email")
 
     @field_validator("email")
