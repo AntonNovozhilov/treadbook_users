@@ -12,7 +12,7 @@ class User(BaseModel):
     password = Column(String(128), nullable=False)
     is_superuser = Column(Boolean, default=False, nullable=False)
     is_active = Column(Boolean, default=True, nullable=False)
-    join_date = Column(Date, nullable=False, defoult=datetime.now)
+    join_date = Column(Date, nullable=False, default=datetime.now)
 
 
     __table_args__ = (
