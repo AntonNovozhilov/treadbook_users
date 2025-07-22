@@ -41,6 +41,7 @@ class UserCreate(UserSchema):
     password: str = Field(
         ..., min_length=6, max_length=128, description="Пароль"
     )
+        
 
 
 class UserUpdate(UserSchema):
