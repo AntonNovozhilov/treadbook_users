@@ -42,6 +42,11 @@ class UserCreate(UserSchema):
         ..., min_length=6, max_length=128, description="Пароль"
     )
         
+    @field_validator('password')
+    def validate_password(cls, value: str):
+        if len(value) < 5:
+            raise ValueError('Пароль должен быть больше 5 символов.')
+        return value
 
 
 class UserUpdate(UserSchema):
