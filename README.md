@@ -6,6 +6,8 @@ FastApi, Alembic, SqlAlchemy
 ## Сервисы. 
 - Дневник Трейдера. Управление пользователями.
 https://github.com/AntonNovozhilov/treadbook_users
+- Дневник Трейдера. Авторизация.
+https://github.com/AntonNovozhilov/treadbook_auth
 - Дневник Трейдера. Управление записями. ( В разработке)
 - Дневник Трейдера. Админка. ( В разработке)
 - Дневник Трейдера. Фронт. ( В разработке)
